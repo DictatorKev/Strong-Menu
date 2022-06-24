@@ -1,4 +1,8 @@
 # League_Bot_Health
+
+If I have the time, I will make a window and easy use in the future, so you don't have to use any python tool to run the script -.-
+
+
 A bot that heals you automatically or uses ult as soon as you need it (very fast reaction and is kept simple so it won't be detected)
 
 Reading memory and executing keyboard-commands.
