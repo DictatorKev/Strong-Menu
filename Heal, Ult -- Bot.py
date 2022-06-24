@@ -8,7 +8,7 @@ pm = Pymem("League of Legends.exe")
 health =  #the target health as int or float
 key =  "" #the key to press
 address = "" #the address of the own health
-cooldown = 0.5 #the cooldown in seconds of the choosen spell. Int as well as float and goes on seconds.
+cooldown =  #the cooldown in seconds of the choosen spell. Int as well as float and goes on seconds.
 
 
 while True: 
