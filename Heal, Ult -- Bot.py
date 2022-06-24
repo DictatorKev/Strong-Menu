@@ -1,14 +1,14 @@
 from pymem import Pymem
-import time as sleep
+import time
 import keyboard 
 
 pm = Pymem("League of Legends.exe")
 
 
-health =  #the target health as int or float
-key =  "" #the key to press
-address = "" #the address of the own health
-cooldown =  #the cooldown in seconds of the choosen spell. Int as well as float and goes on seconds.
+health = 500 #the target health as int or float
+key =  "D" #the key to press
+address = 0x1A825A34 #the address of the own health
+cooldown = 300 #the cooldown in seconds of the choosen spell. Int as well as float and goes on seconds.
 
 
 while True: 
@@ -22,10 +22,11 @@ while True:
     if Stats < health: #if your health is less than xxx.. Heal, Ult, use Pot or whatever (int and float). 
         try:
             keyboard.press_and_release(key) #what key it is on
-            sleep(cooldown) #depending on your cooldowns. VERY IMPORTANT TO BE RIGHT!!!!!!!!!!!!!!!!!!!!!
+            time.sleep(cooldown) #depending on your cooldowns. VERY IMPORTANT TO BE RIGHT!!!!!!!!!!!!!!!!!!!!!
             #breaking the script
         except:
             continue
+
 
 
 
