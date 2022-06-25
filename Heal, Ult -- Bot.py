@@ -4,32 +4,45 @@ import keyboard
 
 pm = Pymem("League of Legends.exe")
 
-
-health = 500 #the player changing health as int or float
-key =  "D" #the key to press
-address = 0x1A825A34 #the address of your own health with changes (for specific numbers to heal)
-address_precentage = 0x1A825A34 #for heal/ult at for example 20% health
-cooldown = 300 #the cooldown in seconds of the choosen spell. Int as well as float and goes on seconds.
+between = input("would you like to heal at a specific healthpoint or precentage? Type either \"Health\" or \"%\"").lower()	
 
 
 
-while True: 
-    Stats = pm.read_int(address) #either you take the "precentage" or "address". address if you know when to heal and address_precentage if you want to heal at 20% health or whatever you like.
-    #precentage = pm.read_int(address_precentage)
-    #precentage = address_precentage/100*20   # must be changed to the precentage you need.
-    #print(precentage)
-    print(Stats)
-    
-
-
-    if Stats < health: #if your health is less than xxx.. Heal, Ult, use Pot or whatever (int and float). Change health to precentage if you need otherwise.
+if between == "health":
+    health = int(input("At what healthpoint would you like to heal, use pot or Ult at?(only integers)"))
+    key1 = input("What key would you like to execute?(only letters)").lower()
+    cooldown1 = int(input("What is the cooldown in seconds for the spell?(only integers and pots are always at 16 seconds!!!!)")) #Pots are always at 16 seconds!!!!
+    address1 = input("What is the address of your dynamic health?(only integers and either static or dynamic)")
+    the_hex = int(address1, 16)
+    while True:
+        Stats = pm.read_int(the_hex)
         try:
-            keyboard.press_and_release(key) #what key it is on
-            time.sleep(cooldown) #depending on your cooldowns. VERY IMPORTANT TO BE RIGHT!!!!!!!!!!!!!!!!!!!!!
-            #breaking the script
+            if Stats < health:
+                keyboard.press_and_release(key1)
+                time.sleep(cooldown1)
         except:
             continue
 
+elif between == "%":
+    precentage = int(input("At what precentage would you like to heal, use pot or Ult at?(only integers)"))
+    key = input("What key would you like to execute?(only letters)").lower()
+    cooldown = int(input("What is the cooldown in seconds for the spell?(only integers and pots are always at 16 seconds!!!!)")) #Pots are always at 16 seconds!!!!
+    address2 = input("What is the address of your dynamic health?(only integers and either static or dynamic)")
+    address = input("What is the address of your static health?(only integers and either static or dynamic)")
+    the_hex1 = int(address2, 16)
+    the_hex2 = int(address, 16)
+    while True:
+        Stats1 = pm.read_int(the_hex1)
+        Stats = pm.read_int(the_hex2)
+        New_Stats = Stats/100*precentage
+        print(Stats1)
+        try:
+            if Stats1 < New_Stats:
+                keyboard.press_and_release(key)
+                time.sleep(cooldown)
+                print("Script will pause till cooldown is back")
+        except:
+            continue 
 
 
 
