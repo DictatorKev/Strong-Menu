@@ -16,6 +16,7 @@ if between == "health":
     the_hex = int(address1, 16)
     while True:
         Stats = pm.read_int(the_hex)
+        print(Stats)
         try:
             if Stats < health:
                 keyboard.press_and_release(key1)
