@@ -20,10 +20,11 @@ both for keyboard
 
 
 You have to indicate :
-- the required health to execute.
+- the required health to execute (either a number or the precentage).
 - the key that will be pressed (example.. F for Heal)
-- Static/Dynamic address of the source (can be found by using tools such as cheat engine, alternatives similar to cheat engine, google or reverse engineering the game) 
 - cooldown of your spell. note, you have to change the ult value individiualy once the cooldown changes (doesn't include summoner spells since they always stay the same over the entire game).
+- Static/Dynamic address of the source (can be found by using tools such as cheat engine, alternatives similar to cheat engine, google or reverse engineering the game but must be up to date!!) 
+
 
 
 
