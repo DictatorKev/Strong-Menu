@@ -2,7 +2,7 @@
 
 I'll be adding a window in the near future to support easier use of this tool
 
-A bot that heals you automatically or uses ult as soon as you need it (very fast reaction and is kept simple so it won't be detected)
+A bot that heals you automatically, uses pot or uses ult as soon as you need it (very fast reaction and is kept simple so it won't be detected)
 
 Reading memory and executing keyboard-commands.
 
