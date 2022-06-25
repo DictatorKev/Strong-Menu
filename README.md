@@ -1,8 +1,7 @@
 # League_Bot_Health
 
-I'll be adding a window in the near future to support easier use of this tool
 
-A bot that heals you automatically, uses pot or uses ult as soon as you need it (very fast reaction and is kept simple so it won't be detected)
+A bot that heals you automatically, uses pot or ult as soon as you need it (very fast reaction and is kept simple so it won't be detected)
 
 Reading memory and executing keyboard-commands.
 
@@ -14,21 +13,24 @@ just typ it in my script and it will automatically execute the command, so you c
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 What you need:
-Install: PIL
-Install: pyautogui
-both for keyboard
+import tkinter as tk
+from logging import root
+from tracemalloc import start
+from pymem import Pymem
+import time
+import keyboard
+import os
+from tkinter import*
+Install those listet libraries.
 
 
 You have to indicate :
 - the required health to execute (either a number or the precentage).
-- the key that will be pressed (example.. F for Heal)
-- cooldown of your spell. note, you have to change the ult value individiualy once the cooldown changes (doesn't include summoner spells since they always stay the same over the entire game).
-- Static/Dynamic address of the source (can be found by using tools such as cheat engine, alternatives similar to cheat engine, google or reverse engineering the game but must be up to date!!) 
+- the key on your keyboard that will be pressed (example.. F for Heal)
+- cooldown depending on your spell. note, you have to change the ult value individiually once the cooldown changes (doesn't include summoner spells since they always stay the same over the entire game).
+- Static/Dynamic address of the source (can be found by using tools such as cheat engine, alternatives similar to cheat engine, google or reverse engineering the game but must be up to date!!) I'll be doing a tutorial soon, showing you the beste Way to use it.
+https://github.com/Squalr/Squalr/releases/tag/2.3.13)
+the program I'm using to get the address.
 
+Please open the .py file with Python, so that the Terminal opens itself too.
 
-
-
-to end the script... go to your application which is running python and close it.
-
-Using Visual Code?
-CTRL+C will end the process
