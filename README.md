@@ -1,5 +1,8 @@
 # Bot for every Application
 
+The Bot is now supporting every game.
+Only thing to do is adding the game into the first section of the menu like "League of Legends.exe" and fill up the rest.
+
 
 A bot that heals you automatically, uses pot or ult as soon as you need it (very fast reaction and is kept simple so it won't be detected)
 
