@@ -1,4 +1,4 @@
-# League_Bot_Health
+# Bot for every Application
 
 
 A bot that heals you automatically, uses pot or ult as soon as you need it (very fast reaction and is kept simple so it won't be detected)
